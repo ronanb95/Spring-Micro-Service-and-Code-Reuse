@@ -46,6 +46,14 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.bisnode.opa/opa-java-client -->
+		<dependency>
+			<groupId>com.bisnode.opa</groupId>
+			<artifactId>opa-java-client</artifactId>
+			<version>0.3.0</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>

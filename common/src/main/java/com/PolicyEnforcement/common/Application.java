@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.PolicyEnforcement.common","com.PolicyEnforcement.AdminService"})
+@ComponentScan(basePackages = {"com.PolicyEnforcement.common.service", "com.PolicyEnforcement.common","com.PolicyEnforcement.AdminService"})
 public class Application implements CommandLineRunner{
 
 
