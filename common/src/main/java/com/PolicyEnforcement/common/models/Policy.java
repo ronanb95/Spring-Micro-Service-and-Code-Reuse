@@ -14,7 +14,7 @@ public class Policy {
     @Id
     String id;  
     String code; //This is only really used to store the code for reference, could remove 
-    String codeExpression;
+    //String codeExpression;
 
 }
 
