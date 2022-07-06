@@ -1,9 +1,17 @@
-package kubernetes.admission
+package allowDenyFoodOrder
 
-deny[msg] {
-    input.request.kind.kind == "Pod"
-    some i
-    image := input.request.object.spec.containers[i].image
-    not startswith(image, "hooli.com/")
-    msg := sprintf("image '%v' comes from untrusted registry", [image])
+data_retrieval_endpoint = "http://localhost:8083/justeat"
+
+data = http.send(
+    {
+        "method":"GET",
+        "url":data_retrieval_endpoint
+    }
+)
+
+default allowOrder = false
+
+allowOrder {
+    m := input.food
+    m == data.body[i]
 }
