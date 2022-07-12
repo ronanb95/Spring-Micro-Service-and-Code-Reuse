@@ -1,23 +1,30 @@
 package com.PolicyEnforcement.DataRetrievalService;
 
-import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.PolicyEnforcement.DataRetrievalService.models.Bitcoin;
+
 @Controller
 public class DataRetrievalController {
 
     @Autowired
-    JustEatService justEatService;
+    CoinDeskPriceService coinDeskPriceService;
 
-    @GetMapping(value="/justeat")
+    @GetMapping(value="/coinprices")
     public ResponseEntity<?> getListOfRestaurants(){
 
-        ArrayList<String> response = justEatService.getAvailableFoodsForPostcode("ec4m");
-        return ResponseEntity.ok(response);
+        Bitcoin response;
+        try {
+            response = coinDeskPriceService.getCoinPrices();
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+           return ResponseEntity.badRequest().body("The following error occurred : " + e.getMessage());
+        }
+        
     }
 
     

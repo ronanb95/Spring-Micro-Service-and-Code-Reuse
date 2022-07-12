@@ -21,7 +21,7 @@ public class AdminServiceController {
     @Autowired
     OPAService opaService;
 
-    @PostMapping(value = "/policy", consumes=MediaType.TEXT_PLAIN_VALUE) //Using plain text for ease of use
+    @PostMapping(value = "/policy", consumes=MediaType.TEXT_PLAIN_VALUE) //Using plain text for ease of use when creating a policy
     public ResponseEntity<?> createPolicy(@RequestBody String policyObject){
        
         Policy policy = new Policy();

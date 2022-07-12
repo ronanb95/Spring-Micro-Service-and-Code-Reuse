@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.PolicyEnforcement.common.service", "com.PolicyEnforcement.common","com.PolicyEnforcement.AdminService"})
+@ComponentScan(basePackages = {"com.PolicyEnforcement.common.service","com.PolicyEnforcement.AdminService","com.PolicyEnforcement.EnforcementService"})
 public class Application implements CommandLineRunner{
 
 
@@ -16,7 +16,7 @@ public class Application implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		//logger.info("Connecting to following db: {}", mongoConnect);	
+			
 	}
 
 }

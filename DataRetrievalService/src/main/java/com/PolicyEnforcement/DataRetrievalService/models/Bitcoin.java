@@ -9,15 +9,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CuisineOption {
+public class Bitcoin {
 
-    @JsonProperty("Name")
-    String name;
+    @JsonProperty("usd")
+    int usd;
 
-    @JsonProperty("SeoName")
-    String seoName;
-
-    @JsonProperty("Total")
-    int total;
-    
 }

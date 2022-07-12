@@ -9,12 +9,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class JustEatResponse {
+public class CoinGeckoResponse {
 
-    @JsonProperty("Area")
-    String area;
-
-    @JsonProperty("MetaData")
-    MetaData metaData;
+    @JsonProperty("bitcoin")
+    Bitcoin bitcoin;
     
 }

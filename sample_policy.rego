@@ -1,6 +1,6 @@
-package allowDenyFoodOrder
+package allowBitCoinPurchase
 
-data_retrieval_endpoint = "http://localhost:8083/justeat"
+data_retrieval_endpoint = "http://localhost:8083/coinprices"
 
 data = http.send(
     {
@@ -9,9 +9,11 @@ data = http.send(
     }
 )
 
-default allowOrder = false
+default allowPurchase = false
 
-allowOrder {
-    m := input.food
-    m == data.body[i]
+allowPurchase {
+    currency := input.currency
+    currency == "usd"
+    price := data.usd
+    price < 20000
 }
