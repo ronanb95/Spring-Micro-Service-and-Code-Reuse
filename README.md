@@ -10,7 +10,7 @@ This repository also showcases code reuse across the various microservices, made
 
 ### Efficency
 
-Please note that this application is not designed with efficency in mind. Therefore some architecture decisions have been made in order to shwcase certain features.
+Please note that this application is not designed with efficency in mind. Therefore some architecture decisions have been made in order to showcase certain features as opposed to optimizing the application.
 
 ### Running the application
 
